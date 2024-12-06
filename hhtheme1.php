@@ -61,5 +61,41 @@ Using of LOOP
     ?>
 </body>
 </html>
-            
+
+
+Bootstrapping
+-------------
+
+Basic HTML to WP Template
+---------------------------
+
+To Do List
+
+1. add template markup to index.php file
+2. necessary bootstrapping (after-theme_setup action hook)
+3. write css to style.css
+4. add support for bootstrap css
+5. change markup to theme code
+6. split into multiple files
+
+
+HOOK
+
+<?php
+
+function alpha_bootstrapping(){
+   load_theme_textdomain("alpha");
+   add_theme_support("post-thumbnails");
+   add_theme_support("title-tag");
+}
+
+add_action("after_setup_theme","alpha_bootstrapping");
+
+
+
+
+
+
+
+
             
