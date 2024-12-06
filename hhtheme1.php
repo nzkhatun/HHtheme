@@ -37,3 +37,29 @@ function change_case($text){
 }
 
 screenshot.png
+
+
+Using of LOOP
+------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        <?php bloginfo(); ?>
+    </title>
+</head>
+<body>
+    <?php
+    while(have_posts()){
+        the_post();
+
+        echo "<h3>";
+        the_title();
+        //the_content();
+        echo "</h3>";
+    }
+    ?>
+</body>
+</html>
+            
+            
